@@ -11,7 +11,24 @@ public class Main {
          gafanhoto[0] = new Gafanhoto("João", 22, "M", "Jão123");
          gafanhoto[1] = new Gafanhoto("Maria", 30, "F", "Maria123");
 
-        System.out.println(video[0].toString());
-        System.out.println(gafanhoto[0].toString());
+        System.out.println(video[1].toString());
+        System.out.println(gafanhoto[1].toString());
+
+        Visualizacao v1[] = new Visualizacao[5];
+        v1[0] = new Visualizacao(gafanhoto[0], video[1]);
+        v1[1] = new Visualizacao(gafanhoto[0], video[2]);
+        v1[2] = new Visualizacao(gafanhoto[1], video[1]);
+        v1[3] = new Visualizacao(gafanhoto[1], video[2]);
+        v1[4] = new Visualizacao(gafanhoto[0], video[0]);
+
+        v1[0].avaliar();
+        v1[0].avaliar(88.9f);
+        v1[0].avaliar(10);
+        v1[2].avaliar();
+        v1[2].avaliar(88.9f);
+        v1[2].avaliar(10);
+
+
+        System.out.println(v1[0].toString());
     }
 }
